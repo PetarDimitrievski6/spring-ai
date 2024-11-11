@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenAI Image</title>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.2.3/css/bootstrap.min.css}">
+
+
+</head>
+<body>
+<div class="container mt-5">
+    <form th:method="post" th:action="@{/ai/image/generate}">
+        <div class="form-group mb-3">
+            <label for="message">Generate Image</label>
+            <input class="form-control" id="message" type="text" name="message" placeholder="Type your question...">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+</body>
+</html>

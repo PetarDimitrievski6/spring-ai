@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generated Image</title>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.2.3/css/bootstrap.min.css}">
+</head>
+<body>
+<div class="container mt-5">
+    <h1 class="text-center">Generated Image</h1>
+
+    <!-- Display the generated image -->
+    <div class="text-center">
+        <img th:src="@{${imageUrl}}" alt="Generated Image" class="img-fluid">
+    </div>
+
+    <!-- Button to generate another image -->
+    <div class="text-center mt-4">
+        <a href="/ai/image" class="btn btn-secondary">Generate Another Image</a>
+    </div>
+</div>
+</body>
+</html>
