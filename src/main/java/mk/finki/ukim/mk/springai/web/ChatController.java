@@ -1,6 +1,7 @@
 package mk.finki.ukim.mk.springai.web;
 
 import mk.finki.ukim.mk.springai.service.ImageService;
+import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.image.ImageResponse;
 import org.springframework.ai.openai.OpenAiChatModel;
 import org.springframework.stereotype.Controller;
@@ -13,11 +14,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 @RequestMapping("/ai")
 public class ChatController {
-    private final OpenAiChatModel chatModel;
+    private final ChatClient chatClient;
     private final ImageService imageService;
 
-    public ChatController(OpenAiChatModel chatModel, ImageService imageService) {
-        this.chatModel = chatModel;
+    public ChatController(ChatClient.Builder builder, ImageService imageService) {
+        this.chatClient = builder.build();
         this.imageService = imageService;
     }
 
@@ -27,7 +28,7 @@ public class ChatController {
     }
     @PostMapping("/chat")
     public String askAi(@RequestParam(value = "message", defaultValue = "Tell me a joke") String message, Model model){
-        String responseAi = this.chatModel.call(message);
+        String responseAi = this.chatClient.prompt().user(message).call().content();
         model.addAttribute("responseAi", responseAi);
         return "chat";
     }
