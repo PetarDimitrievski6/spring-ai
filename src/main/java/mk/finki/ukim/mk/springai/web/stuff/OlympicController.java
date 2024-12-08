@@ -25,9 +25,9 @@ public class OlympicController {
         this.chatClient = builder.build();
     }
 
-    @GetMapping("/2024")
+    @GetMapping("/2028")
     public String get2024OlympicSports(
-            @RequestParam(value = "message", defaultValue = "What sports are being included in the 2024 Summer Olympics?") String message,
+            @RequestParam(value = "message", defaultValue = "What sports are being included in the 2028 Olympics?") String message,
             @RequestParam(value = "stuff", defaultValue = "false") boolean stuffFlag
     ) throws IOException {
         String sports = docsToStuffResource.getContentAsString(Charset.defaultCharset());

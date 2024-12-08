@@ -36,6 +36,7 @@ public class DadJokeController {
         String userMessage = "Tell me a serious joke about the universe";
 
         return chatClient.prompt()
+                .system("Speak in pirate voice!")
                 .user(userMessage)
                 .call()
                 .content();

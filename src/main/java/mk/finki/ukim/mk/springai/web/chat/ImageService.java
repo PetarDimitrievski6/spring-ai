@@ -16,8 +16,8 @@ public class ImageService {
     public ImageResponse generateImage(String prompt) {
         ImageOptions imageOptions = ImageOptionsBuilder.builder()
                 .withN(1) //Number of images to be generated
-                .withHeight(1024)
-                .withWidth(1024)
+                .withHeight(500)
+                .withWidth(500)
                 .build();
 
 

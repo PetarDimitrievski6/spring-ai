@@ -5,6 +5,7 @@ import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import reactor.core.publisher.Flux;
 
 import java.util.List;
 
@@ -50,6 +51,12 @@ public class ActorController {
                 .entity(ActorFilms.class);
     }
 
-
+    @GetMapping("/films-stream")
+    public Flux<String> stream() {
+        return chatClient.prompt()
+                .user("Generate a filmography for a Arnold Schwarzenegger for the year 2010.")
+                .stream()
+                .content();
+    }
 
 }

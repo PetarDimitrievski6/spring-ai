@@ -1,0 +1,44 @@
+1. Chat
+browser - localhost:8080/ai
+browser - localhost:8080/image
+
+2. Memory
+localhost:8080/chat?message="Hello! My name is Petar."
+localhost:8080/chat?message="What's my name?"
+
+3. Prompt
+localhost:8080/dad-joke
+localhost:8080/not-dad-joke
+
+4. Output
+localhost:8080/films-string
+localhost:8080/films
+localhost:8080/films-list
+localhost:8080/films-by-actor?actor="Arnold Schwarzenegger"
+localhost:8080/films-stream
+
+5. Stuff
+localhost:8080/olympics/2028
+localhost:8080/olympics/2028?stuff=true
+
+6. Functions
+localhost:8080/cities?message="What is the weather like in Skopje?"
+
+7. Rag
+localhost:8080/faq
+
+8. Vision
+localhost:8080/coffee-describe
+localhost:8080/code-describe
+localhost:8080/image-to-code
+
+
+
+
+
+
+
+
+
+
+
