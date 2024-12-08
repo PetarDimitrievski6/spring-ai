@@ -1,4 +1,4 @@
-package mk.finki.ukim.mk.springai.config;
+package mk.finki.ukim.mk.springai.web.function;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

@@ -59,6 +59,10 @@
             <artifactId>bootstrap</artifactId>
             <version>5.2.3</version> <!-- Change to the desired version -->
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
     </dependencies>
     <dependencyManagement>
         <dependencies>

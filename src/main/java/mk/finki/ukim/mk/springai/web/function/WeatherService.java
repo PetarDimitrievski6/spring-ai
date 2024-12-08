@@ -1,6 +1,5 @@
-package mk.finki.ukim.mk.springai.service;
+package mk.finki.ukim.mk.springai.web.function;
 
-import mk.finki.ukim.mk.springai.config.WeatherConfigProperties;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;

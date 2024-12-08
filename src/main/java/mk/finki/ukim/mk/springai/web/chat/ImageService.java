@@ -1,4 +1,4 @@
-package mk.finki.ukim.mk.springai.service;
+package mk.finki.ukim.mk.springai.web.chat;
 
 
 import org.springframework.ai.image.*;

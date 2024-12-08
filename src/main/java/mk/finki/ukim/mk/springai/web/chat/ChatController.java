@@ -1,9 +1,7 @@
-package mk.finki.ukim.mk.springai.web;
+package mk.finki.ukim.mk.springai.web.chat;
 
-import mk.finki.ukim.mk.springai.service.ImageService;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.image.ImageResponse;
-import org.springframework.ai.openai.OpenAiChatModel;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
